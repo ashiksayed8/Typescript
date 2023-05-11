@@ -17,3 +17,24 @@ const nameFriends: genericArray<string> = ["Ashik", "Atik", "Aziz"];
 type objectType = {name: string, age: number};
 
 const objectUsers: genericArray<objectType> = [{name: "Ashik", age: 27}, {name: "Atik", age: 27}];
+
+
+//Tuple create witin Generic type--------
+type GenericTuple<X, Y> = [X, Y];
+
+const relationShip: GenericTuple<string, string> = ["Ashik", "Islam"];
+
+
+//Object Using-------------------
+//Type alias used-------
+// type relationObject = {
+//     name: string;
+//     salary: number
+// }
+
+//Interface Using--------------------------
+interface IRelationObject {
+   name: string;
+   salary : number
+}
+const reletionWithSalary : GenericTuple<IRelationObject,string> = [{name: "Ashik", salary: 1000000000}, "Islam"]
